@@ -1,0 +1,8 @@
+# Dependências e arquivos gerados não precisam ir para o repositório.
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/dist/
+*.pyc
+.env

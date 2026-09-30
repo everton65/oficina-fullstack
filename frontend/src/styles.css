@@ -1,0 +1,47 @@
+/* Paleta e tipografia da oficina. O CSS já vem pronto para focarmos no código. */
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172d3d;
+  background: #f3f6fa;
+  font-synthesis: none;
+  line-height: 1.5;
+}
+
+/* O tamanho de cada elemento passa a incluir suas bordas e preenchimentos. */
+* { box-sizing: border-box; }
+body { margin: 0; }
+input, button { font: inherit; }
+.container { max-width: 880px; padding: 42px 24px; margin: 0 auto; }
+.cabecalho { margin-bottom: 32px; }
+.marca { margin: 0; font-size: 22px; font-weight: 800; color: #00876e; }
+.instituicao { margin: 4px 0 24px; color: #536677; }
+h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 14px; }
+h2 { font-size: 23px; margin: 0; }
+.descricao, .dica, footer { color: #536677; }
+.formulario { padding: 26px; background: #fff; border: 1px solid #dce4eb; border-radius: 14px; }
+label { display: block; font-weight: 650; margin-bottom: 10px; }
+.linha-formulario { display: flex; gap: 12px; }
+input { min-width: 0; flex: 1; padding: 13px 15px; border: 1px solid #9dabb7; border-radius: 8px; }
+button { padding: 13px 22px; color: #fff; background: #006b58; border: 0; border-radius: 8px; font-weight: 650; cursor: pointer; }
+button:hover:not(:disabled) { background: #005344; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+/* Um contorno visível facilita usar o formulário com teclado. */
+input:focus-visible, button:focus-visible { outline: 3px solid #1686af; outline-offset: 3px; }
+.dica { margin: 12px 0 0; font-size: 14px; }
+.erro { color: #9b2020; background: #fff0f0; padding: 14px; border-radius: 8px; }
+.sucesso { color: #006b58; }
+.lista { margin-top: 32px; }
+.titulo-lista { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.titulo-lista span { color: #536677; }
+ul { list-style: none; padding: 0; }
+li { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #dce4eb; overflow-wrap: anywhere; }
+.numero { color: #00876e; font-weight: 700; flex-shrink: 0; }
+.vazio { padding: 28px 0; color: #536677; }
+footer { margin-top: 48px; font-size: 14px; }
+footer p { margin: 5px 0; }
+/* Em telas pequenas, o botão vai para baixo do campo. */
+@media (max-width: 560px) {
+  .linha-formulario { flex-direction: column; }
+  .titulo-lista { align-items: flex-start; flex-direction: column; }
+  .container { padding: 28px 18px; }
+}

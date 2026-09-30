@@ -1,0 +1,4 @@
+# Versões fixadas para manter o mesmo ambiente nos computadores da oficina.
+fastapi==0.116.1
+uvicorn==0.35.0
+pydantic==2.11.7
